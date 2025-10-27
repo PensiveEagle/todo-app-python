@@ -26,3 +26,4 @@ while loop:
             task_list[grab_task] = edit_task
         case 'exit':
             break
+print( 'Closing To Do App!!' )
