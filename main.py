@@ -1,0 +1,82 @@
+task_prompt = "Enter a task: "
+action_prompt = "Type add, show, edit, complete, or exit: "
+grab_prompt = "Which item would you like to edit/complete?: "
+edit_prompt = "Enter new task: "
+
+loop = True
+
+with open( 'task_data.txt', 'a' ) as task_file:
+    pass
+
+while loop:
+    action = input( action_prompt )
+    action = action.strip()
+    
+    match action:
+        
+        case 'add':
+            new_task = input( task_prompt )
+            
+            with open( 'task_data.txt', 'r' ) as task_file:
+                task_list = task_file.readlines()
+            
+            task_list.append( new_task )
+            
+            with open( 'task_data.txt', 'w' ) as task_file:
+                task_file.writelines( task_list )
+                
+            print( f'\n{new_task} added to list!\n' )
+            
+        case 'show':
+            with open( 'task_data.txt', 'r' ) as task_file:
+                task_list = task_file.readlines()
+            
+            print()
+            for index, item in enumerate(task_list):
+                print( f'{index + 1}:- {item}' )
+            print()
+            
+        case 'edit':
+            with open( 'task_data.txt', 'r' ) as task_file:
+                task_list = task_file.readlines()
+            
+            print()
+            for index, item in enumerate(task_list):
+                print( f'{index + 1}:- {item}' )
+            print()
+            
+            grab_task = int( input( grab_prompt ) ) - 1
+            old_task = task_list[grab_task]
+            print( f'\nCurrent task: {old_task}\n' )
+            
+            edit_task = input( edit_prompt )
+            print()
+            task_list[grab_task] = edit_task
+            
+            with open( 'task_data.txt', 'w' ) as task_file:
+                task_file.writelines( task_list )
+                
+            print( f'\n{old_task} replaced with {edit_task}\n' )
+            
+        case 'complete':
+            with open( 'task_data.txt', 'r' ) as task_file:
+                task_list = task_file.readlines()
+            
+            print()
+            for index, item in enumerate(task_list):
+                print( f'{index + 1}:- {item}' )
+            print()
+            
+            grab_task = int( input( grab_prompt ) ) - 1
+            complete_task = task_list[grab_task]
+            task_list.pop( grab_task )
+            
+            with open( 'task_data.txt', 'w' ) as task_file:
+                task_file.writelines( task_list )
+            
+            print( f'\n{complete_task} marked as complete!\n' )
+            
+        case 'exit':
+            break
+        
+print( f'\nClosing To Do App!!\n' )
