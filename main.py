@@ -8,20 +8,20 @@ with open( 'task_data.txt', 'a' ) as task_file:
 while loop:
     action = input( prompts['action'] )
     
-    if 'add' in 'action':
-        new_task = input( prompts['task'] )
-            
-        with open( 'task_data.txt', 'r' ) as task_file:
-            task_list = task_file.readlines()
-        
-        task_list.append( new_task )
-        
-        with open( 'task_data.txt', 'w' ) as task_file:
-            task_file.writelines( task_list )
-            
-        print( f'\n{new_task} added to list!\n' )
-    
     match action:
+        
+        case 'add':
+            new_task = input( prompts['task'] )
+            
+            with open( 'task_data.txt', 'r' ) as task_file:
+                task_list = task_file.readlines()
+            
+            task_list.append( new_task )
+            
+            with open( 'task_data.txt', 'w' ) as task_file:
+                task_file.writelines( task_list )
+                
+            print( f'\n{new_task} added to list!\n' )
         
         case 'show':
             with open( 'task_data.txt', 'r' ) as task_file:
