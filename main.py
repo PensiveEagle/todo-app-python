@@ -1,7 +1,4 @@
-task_prompt = "Enter a task: "
-action_prompt = "Type add, show, edit, complete, or exit: "
-grab_prompt = "Which item would you like to edit/complete?: "
-edit_prompt = "Enter new task: "
+prompts = {'task': 'Enter a task: ', 'action': 'Type add, show, edit, complete, or exit: ', 'grab': 'Which item would you like to edit/complete?: ', 'edit': 'Enter new task: '}
 
 loop = True
 
@@ -9,10 +6,10 @@ with open( 'task_data.txt', 'a' ) as task_file:
     pass
 
 while loop:
-    action = input( action_prompt )
+    action = input( prompts['action'] )
     
     if 'add' in 'action':
-        new_task = input( task_prompt )
+        new_task = input( prompts['task'] )
             
         with open( 'task_data.txt', 'r' ) as task_file:
             task_list = task_file.readlines()
@@ -44,11 +41,11 @@ while loop:
                 print( f'{index + 1}:- {item}' )
             print()
             
-            grab_task = int( input( grab_prompt ) ) - 1
+            grab_task = int( input( prompts['grab'] ) ) - 1
             old_task = task_list[grab_task]
             print( f'\nCurrent task: {old_task}\n' )
             
-            edit_task = input( edit_prompt )
+            edit_task = input( prompts['edit'] )
             print()
             task_list[grab_task] = edit_task
             
@@ -66,7 +63,7 @@ while loop:
                 print( f'{index + 1}:- {item}' )
             print()
             
-            grab_task = int( input( grab_prompt ) ) - 1
+            grab_task = int( input( prompts['grab'] ) ) - 1
             complete_task = task_list[grab_task]
             task_list.pop( grab_task )
             
