@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/PensiveEagle/">
-    <img src="docs/assets/makers_mark.svg" alt="Logo" width="80" height="80">
+    <img src="docs/assets/makers_mark_circle.svg" alt="Logo" width="150" height="auto">
   </a>
 
 <h3 align="center">Simple To-Do App</h3>
@@ -64,15 +64,20 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Simple To-Do App CLI Screen Shot][cli-screenshot]]
-[![Simple To-Do App GUI Screen Shot][gui-screenshot]]
-[![Simple To-Do App WebApp Screen Shot][webapp-screenshot]]
-
 This project is a basic personal learning project that I have built to practice my Python skills.
 
 It is a simple To-Do tracking application that allows a user to add and complete tasks.
 
 The application comes with the ability to use three user interfaces, a CLI text only interface, a GUI interface creating using (insert package here), and a WebApp interface using StreamLit.
+
+#### CLI
+<img src="docs/assets/cli-screenshot.png" alt="CLI Screenshot" width="100%" height="auto">
+
+#### Desktop GUI
+<img src="docs/assets/cli-screenshot.png" alt="GUI Screenshot" width="100%" height="auto">
+
+#### WebApp Interface
+<img src="docs/assets/cli-screenshot.png" alt="WebApp Interface" width="100%" height="auto">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -199,7 +204,6 @@ Don't forget to give the project a star! Thanks again!
 [license-url]: https://github.com/PensiveEagle/todo-app-python/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jameshall-profile
-[cli-screenshot]: docs/assets/cli-screenshot.png
 [gui-screenshot]: docs/assets/gui-screenshot.png
 [webapp-screenshot]: docs/assets/webapp-screenshot.png
 [python-shield]: https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white
