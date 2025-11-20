@@ -64,6 +64,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+This project is a basic personal learning project that I have built to practice my Python skills.
+
+It is a simple To-Do tracking application that allows a user to add and complete tasks.
+
+The application comes with the ability to use three user interfaces, a CLI text only interface, a GUI interface creating using (insert package here), and a WebApp interface using StreamLit.
+
 #### CLI
 <img src="docs/assets/cli-screenshot.png" alt="CLI Screenshot" width="100%" height="auto">
 
@@ -72,12 +78,6 @@
 
 #### WebApp Interface
 <img src="docs/assets/cli-screenshot.png" alt="WebApp Interface" width="100%" height="auto">
-
-This project is a basic personal learning project that I have built to practice my Python skills.
-
-It is a simple To-Do tracking application that allows a user to add and complete tasks.
-
-The application comes with the ability to use three user interfaces, a CLI text only interface, a GUI interface creating using (insert package here), and a WebApp interface using StreamLit.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
