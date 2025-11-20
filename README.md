@@ -11,7 +11,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/PensiveEagle/">
+  <a href="https://github.com/PensiveEagle/" target="_blank">
     <img src="docs/assets/makers_mark_circle.svg" alt="Logo" width="150" height="auto">
   </a>
 
