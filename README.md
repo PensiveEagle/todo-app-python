@@ -64,9 +64,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Simple To-Do App CLI Screen Shot][cli-screenshot]]
-[![Simple To-Do App GUI Screen Shot][gui-screenshot]]
-[![Simple To-Do App WebApp Screen Shot][webapp-screenshot]]
+#### CLI
+<img src="docs/assets/cli-screenshot.png" alt="CLI Screenshot" width="100%" height="auto">
+
+#### Desktop GUI
+<img src="docs/assets/cli-screenshot.png" alt="GUI Screenshot" width="100%" height="auto">
+
+#### WebApp Interface
+<img src="docs/assets/cli-screenshot.png" alt="WebApp Interface" width="100%" height="auto">
 
 This project is a basic personal learning project that I have built to practice my Python skills.
 
@@ -199,7 +204,6 @@ Don't forget to give the project a star! Thanks again!
 [license-url]: https://github.com/PensiveEagle/todo-app-python/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jameshall-profile
-[cli-screenshot]: docs/assets/cli-screenshot.png
 [gui-screenshot]: docs/assets/gui-screenshot.png
 [webapp-screenshot]: docs/assets/webapp-screenshot.png
 [python-shield]: https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white
