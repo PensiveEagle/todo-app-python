@@ -28,6 +28,9 @@ while loop:
             task_list.append( new_task + '\n' )
             func.write_tasks( task_list )
             
+        case fsg.WINDOW_CLOSED:
+            break
+            
 
 
 window.close()
