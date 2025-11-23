@@ -4,6 +4,8 @@ import time
 
 func.init_data()
 
+fsg.theme( 'System Default' )
+
 clock_label = fsg.Text( time.strftime( '%Y-%m-%d -- %H:%M' ), key = 'clock' )
 task_label = fsg.Text( 'Type in a task' )
 input_box = fsg.InputText( tooltip = 'Enter a task', key = 'task' )
