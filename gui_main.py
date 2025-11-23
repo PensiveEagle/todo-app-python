@@ -43,19 +43,16 @@ while loop:
             
         case 'Edit':
             task_list = func.get_tasks()
-            
             edit_task = values['tasks']
             new_task = values['task']
-            
-            print( edit_task )
-            print( new_task )
             edit_index = task_list.index( edit_task[0] )
             task_list[edit_index] = new_task + '\n'
-            
             func.write_tasks( task_list )
-            
             window['task'].update( value = '' ) #type: ignore
             window['tasks'].update( values = task_list ) #type: ignore
+            
+        case 'tasks':
+            window['task'].update( value = values['tasks'][0].replace( '\n', '' ) ) #type: ignore
             
         case fsg.WINDOW_CLOSED:
             break
