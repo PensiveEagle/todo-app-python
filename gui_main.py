@@ -10,6 +10,7 @@ input_box = fsg.InputText( tooltip = 'Enter a task', key = 'task' )
 add_button = fsg.Button( 'Add' )
 edit_button = fsg.Button( 'Edit' )
 complete_button = fsg.Button( 'Complete' )
+exit_button = fsg.Button( 'Exit' )
 task_list_box = fsg.Listbox( values = func.get_tasks(), 
                             key = "tasks", 
                             enable_events = True,
@@ -19,7 +20,8 @@ task_list_box = fsg.Listbox( values = func.get_tasks(),
 win_layout = [
     [label], 
     [input_box, add_button],
-    [task_list_box, edit_button, complete_button]
+    [task_list_box, edit_button, complete_button],#
+    [exit_button]
 ]
 
 window = fsg.Window( 'Task List App', 
@@ -59,7 +61,11 @@ while loop:
             task_list.pop( complete_index )
             func.write_tasks( task_list )
             window['task'].update( value = '' ) #type: ignore
-            window['tasks'].update( values = task_list ) #type: ignore         
+            window['tasks'].update( values = task_list ) #type: ignore
+            
+        case 'Exit':
+            break
+            
         case 'tasks':
             window['task'].update( value = values['tasks'][0].replace( '\n', '' ) ) #type: ignore
             
