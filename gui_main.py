@@ -45,23 +45,33 @@ while loop:
             window['tasks'].update( values = func.get_tasks() ) #type: ignore
             
         case 'Edit':
-            task_list = func.get_tasks()
-            edit_task = values['tasks']
-            new_task = values['task']
-            edit_index = task_list.index( edit_task[0] )
-            task_list[edit_index] = new_task + '\n'
-            func.write_tasks( task_list )
-            window['task'].update( value = '' ) #type: ignore
-            window['tasks'].update( values = task_list ) #type: ignore
+            try:
+                task_list = func.get_tasks()
+                edit_task = values['tasks']
+                new_task = values['task']
+                edit_index = task_list.index( edit_task[0] )
+                task_list[edit_index] = new_task + '\n'
+                func.write_tasks( task_list )
+                window['task'].update( value = '' ) #type: ignore
+                window['tasks'].update( values = task_list ) #type: ignore
+            except IndexError:
+                print( 'WARNING: No item was selected when edit button was pressed' )
+                fsg.popup( 'Please select a task before editting!', title = 'Error', font = ('Helvetica', 12) )
+                continue
             
         case 'Complete':
-            task_list = func.get_tasks()
-            complete_task = values['tasks']
-            complete_index = task_list.index( complete_task[0] )
-            task_list.pop( complete_index )
-            func.write_tasks( task_list )
-            window['task'].update( value = '' ) #type: ignore
-            window['tasks'].update( values = task_list ) #type: ignore
+            try:
+                task_list = func.get_tasks()
+                complete_task = values['tasks']
+                complete_index = task_list.index( complete_task[0] )
+                task_list.pop( complete_index )
+                func.write_tasks( task_list )
+                window['task'].update( value = '' ) #type: ignore
+                window['tasks'].update( values = task_list ) #type: ignore
+            except IndexError:
+                print( 'WARNING: No item was selected when complete button was pressed' )
+                fsg.popup( 'Please select a task before completing!', title = 'Error', font = ('Helvetica', 12) )
+                continue
             
         case 'Exit':
             break
