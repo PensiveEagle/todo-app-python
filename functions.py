@@ -11,7 +11,7 @@ def get_tasks( filepath: str = FILEPATH ) -> list:
         task_list = task_file.readlines()
     return task_list
 
-def write_tasks( tasks_arg: list , filepath: str = FILEPATH ) -> None:
+def write_tasks( tasks: list , filepath: str = FILEPATH ) -> None:
     ''' Writes a list of tasks out to a text file '''
     with open( filepath, 'w' ) as task_file:
-        task_file.writelines( tasks_arg )
+        task_file.writelines( tasks )
