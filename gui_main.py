@@ -1,11 +1,11 @@
 import functions as func
 import FreeSimpleGUI as fsg
-
-loop = True
+import time
 
 func.init_data()
 
-label = fsg.Text( 'Type in a task' )
+clock_label = fsg.Text( time.strftime( '%Y-%m-%d -- %H:%M' ), key = 'clock' )
+task_label = fsg.Text( 'Type in a task' )
 input_box = fsg.InputText( tooltip = 'Enter a task', key = 'task' )
 add_button = fsg.Button( 'Add' )
 edit_button = fsg.Button( 'Edit' )
@@ -18,7 +18,8 @@ task_list_box = fsg.Listbox( values = func.get_tasks(),
                             ) # type: ignore
 
 win_layout = [
-    [label], 
+    [clock_label],
+    [task_label], 
     [input_box, add_button],
     [task_list_box, edit_button, complete_button],#
     [exit_button]
@@ -29,10 +30,8 @@ window = fsg.Window( 'Task List App',
                     font = ( 'Helvetica', 12 ) )
 
 
-while loop:
-    event, values = window.read() #type: ignore
-    print( event )
-    print( values )
+while True:
+    event, values = window.read( timeout = 60000 ) #type: ignore
     
     match event:
         
@@ -73,13 +72,15 @@ while loop:
                 fsg.popup( 'Please select a task before completing!', title = 'Error', font = ('Helvetica', 12) )
                 continue
             
-        case 'Exit':
-            break
-            
         case 'tasks':
             window['task'].update( value = values['tasks'][0].replace( '\n', '' ) ) #type: ignore
             
-        case fsg.WINDOW_CLOSED:
+        case 'Exit':
             break
+            
+        case fsg.WIN_CLOSED:
+            break
+        
+    window['clock'].update( value = time.strftime( '%Y-%m-%d -- %H:%M' ) ) #type: ignore
             
 window.close()
