@@ -74,7 +74,7 @@ The application comes with the ability to use three user interfaces, a CLI text 
 <img src="docs/assets/cli-screenshot.png" alt="CLI Screenshot" width="100%" height="auto">
 
 #### Desktop GUI
-<img src="docs/assets/cli-screenshot.png" alt="GUI Screenshot" width="100%" height="auto">
+<img src="docs/assets/gui-screenshot.png" alt="GUI Screenshot" width="100%" height="auto">
 
 #### WebApp Interface
 <img src="docs/assets/cli-screenshot.png" alt="WebApp Interface" width="100%" height="auto">
