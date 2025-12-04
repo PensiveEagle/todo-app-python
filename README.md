@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/PensiveEagle/" target="_blank">
-    <img src="docs/assets/makers_mark_circle.svg" alt="Logo" width="150" height="auto">
+    <img src="docs/assets/pensiveeagle-logo.svg" alt="Logo" width="200" height="auto">
   </a>
 
 <h3 align="center">Simple To-Do App</h3>
