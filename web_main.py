@@ -9,3 +9,5 @@ st.write( "This is an example app that allows a user to track tasks" )
 
 for task in tasks:
     st.checkbox( task )
+    
+st.text_input( label = "", placeholder = "Enter a new task..." )
