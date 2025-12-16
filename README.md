@@ -174,7 +174,7 @@ The various versions of this application can also be run using Docker containers
 ### Docker Usage
  
 #### CLI Version
-
+1. Run docker container
 
 #### GUI Version
 
