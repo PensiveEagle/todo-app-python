@@ -8,6 +8,7 @@
 
 
 
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -99,31 +100,36 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+To run this you need to have Python 3.14 or greater, the pip python package installer, or Docker to run the programmes in Docker containers
 
-### Installation
+### Installation - Local
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+The various versions of this application can be run locally on a machine with a compatible version of Python installed
+
+1. Clone the repo
    ```sh
    git clone https://github.com/PensiveEagle/todo-app-python.git
    ```
-3. Install NPM packages
+2. Create a python virtual environment
    ```sh
-   npm install
+   python -m venv .venv
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
+3. Launch the venv
    ```sh
-   git remote set-url origin PensiveEagle/todo-app-python
-   git remote -v # confirm the changes
+   .venv/scripts/activate.ps1
+   ```
+4. Install packages
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+### Installation - Docker
+
+The various versions of this application can also be run using Docker containers
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/PensiveEagle/todo-app-python.git
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -133,49 +139,50 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### Local Usage
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+#### CLI Version
+1. Launch the venv
+   ```sh
+   .venv/scripts/activate.ps1
+   ```
+2. Run the app
+   ```sh
+   python cli_main.py
+   ``` 
+
+#### GUI Version
+1. Launch the venv
+   ```sh
+   .venv/scripts/activate.ps1
+   ```
+2. Run the app
+   ```sh
+   python gui_main.py
+   ```
+
+#### Webapp Version
+1. Launch the venv
+   ```sh
+   .venv/scripts/activate.ps1
+   ```
+2. Run the app
+   ```sh
+   python wapp_main.py
+   ```
+
+### Docker Usage
+ 
+#### CLI Version
+
+
+#### GUI Version
+
+
+#### Webapp Version
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/PensiveEagle/todo-app-python/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Top contributors:
-
-<a href="https://github.com/PensiveEagle/todo-app-python/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=PensiveEagle/todo-app-python" alt="contrib.rocks image" />
-</a>
 
 
 
@@ -183,10 +190,10 @@ Don't forget to give the project a star! Thanks again!
 ## Acknowledgments
 
 * []()
-* []()
-* []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<div align="center"><img src="docs/assets/makers_mark_circle.svg" width="50"></div>
 
 
 
