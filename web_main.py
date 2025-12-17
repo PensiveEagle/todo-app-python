@@ -15,8 +15,13 @@ st.title( "Simple To Do App" )
 st.subheader( "by PensiveEagle" )
 st.write( "This is an example app that allows a user to track tasks" )
 
-for task in tasks:
-    st.checkbox( task )
+for index, task in enumerate(tasks):
+    checkbox = st.checkbox( task, key = task)
+    if checkbox:
+        tasks.pop(index)
+        func.write_tasks( tasks )
+        del st.session_state[task]
+        st.rerun()
     
 st.text_input( label = "Enter a new task", 
               placeholder = "Enter a new task...",
