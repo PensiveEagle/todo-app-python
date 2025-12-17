@@ -110,15 +110,19 @@ The various versions of this application can be run locally on a machine with a 
    ```sh
    git clone https://github.com/PensiveEagle/todo-app-python.git
    ```
-2. Create a python virtual environment
+2. Jump into the app directory
+   ```sh
+   cd todo-app-python
+   ```
+3. Create a python virtual environment
    ```sh
    python -m venv .venv
    ```
-3. Launch the venv
+4. Launch the venv
    ```sh
    .venv/scripts/activate.ps1
    ```
-4. Install packages
+5. Install packages
    ```sh
    pip install -r requirements.txt
    ```
@@ -168,7 +172,7 @@ The various versions of this application can also be run using Docker containers
    ```
 2. Run the app
    ```sh
-   python wapp_main.py
+   streamlit run web_main.py
    ```
 
 ### Docker Usage
