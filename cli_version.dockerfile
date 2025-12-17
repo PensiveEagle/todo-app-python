@@ -1,7 +1,5 @@
 FROM python:3
 
-# SHELL [ "/bin/bash", "-c" ]
-
 WORKDIR /app
 
 COPY requirements.txt .
