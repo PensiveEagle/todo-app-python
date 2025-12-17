@@ -1,4 +1,4 @@
-FILEPATH = 'data/task_data.txt'
+FILEPATH = 'task_data.txt'
 
 def init_data( filepath: str = FILEPATH ):
     '''Initialises the data text file'''
