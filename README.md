@@ -8,11 +8,12 @@
 
 
 
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/PensiveEagle/">
-    <img src="docs/assets/makers_mark_circle.svg" alt="Logo" width="150" height="auto">
+  <a href="https://github.com/PensiveEagle/" target="_blank">
+    <img src="docs/assets/pensiveeagle-logo.svg" alt="Logo" width="200" height="auto">
   </a>
 
 <h3 align="center">Simple To-Do App</h3>
@@ -51,10 +52,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -74,10 +71,10 @@ The application comes with the ability to use three user interfaces, a CLI text 
 <img src="docs/assets/cli-screenshot.png" alt="CLI Screenshot" width="100%" height="auto">
 
 #### Desktop GUI
-<img src="docs/assets/cli-screenshot.png" alt="GUI Screenshot" width="100%" height="auto">
+<img src="docs/assets/gui-screenshot.png" alt="GUI Screenshot" width="100%" height="auto">
 
 #### WebApp Interface
-<img src="docs/assets/cli-screenshot.png" alt="WebApp Interface" width="100%" height="auto">
+<img src="docs/assets/web-screenshot.png" alt="WebApp Interface" width="100%" height="auto">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,6 +83,7 @@ The application comes with the ability to use three user interfaces, a CLI text 
 ### Built With
 
 [![Python][python-shield]][python-url]
+[![Streamlit][streamlit-shield]][streamlit-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,32 +97,53 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+To run this you need to have Python 3.14 or greater, the pip python package installer, or Docker to run the programmes in Docker containers
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+#### Local
+
+The various versions of this application can be run locally on a machine with a compatible version of Python installed
+
+1. Clone the repo
    ```sh
    git clone https://github.com/PensiveEagle/todo-app-python.git
    ```
-3. Install NPM packages
+2. Jump into the app directory
    ```sh
-   npm install
+   cd todo-app-python
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
+3. Create a python virtual environment
    ```sh
-   git remote set-url origin PensiveEagle/todo-app-python
-   git remote -v # confirm the changes
+   python -m venv .venv
    ```
+4. Launch the venv
+   ```sh
+   .venv/scripts/activate.ps1
+   ```
+5. Install packages
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+#### Docker
+
+The CLI and Web App versions of this application can also be run using Docker containers
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/PensiveEagle/todo-app-python.git
+   ```
+2. Jump into the app directory
+   ```sh
+   cd todo-app-python
+   ```
+3. Build the Docker images
+   ```sh
+   docker build -t todo-cli-version -f cli_version.dockerfile .
+   docker build -t todo-web-version -f web_version.dockerfile .
+   ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,60 +152,66 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### Local Usage
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+#### CLI Version
+1. Launch the venv
+   ```sh
+   .venv/scripts/activate.ps1
+   ```
+2. Run the app
+   ```sh
+   python cli_main.py
+   ``` 
+
+#### GUI Version
+1. Launch the venv
+   ```sh
+   .venv/scripts/activate.ps1
+   ```
+2. Run the app
+   ```sh
+   python gui_main.py
+   ```
+
+#### Webapp Version
+1. Launch the venv
+   ```sh
+   .venv/scripts/activate.ps1
+   ```
+2. Run the app
+   ```sh
+   streamlit run web_main.py
+   ```
+
+### Docker Usage
+ 
+#### CLI Version
+1. Run docker container
+   ```sh
+   docker run -it --rm --name cli-todo-app todo-cli-version
+   ```
+
+#### Webapp Version
+1. Run docker container
+   ```sh
+   docker run --rm -d --name web-todo-app -p 8080:8080 todo-web-version
+   ```
+2. Visit localhost:8080 in your web browser
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/PensiveEagle/todo-app-python/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Top contributors:
-
-<a href="https://github.com/PensiveEagle/todo-app-python/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=PensiveEagle/todo-app-python" alt="contrib.rocks image" />
-</a>
 
 
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [Python Mega Course: Build 20 Real-World Apps and AI Agents - Ardit Sulce](https://www.udemy.com/course/the-python-mega-course/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<div align="center"><img src="docs/assets/makers_mark_circle.svg" width="50"></div>
 
 
 
@@ -208,3 +233,5 @@ Don't forget to give the project a star! Thanks again!
 [webapp-screenshot]: docs/assets/webapp-screenshot.png
 [python-shield]: https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white
 [python-url]: https://python.org/
+[streamlit-shield]: https://img.shields.io/badge/streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white
+[streamlit-url]: https://streamlit.io/
