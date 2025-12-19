@@ -99,7 +99,9 @@ To get a local copy up and running follow these simple example steps.
 
 To run this you need to have Python 3.14 or greater, the pip python package installer, or Docker to run the programmes in Docker containers
 
-### Installation - Local
+### Installation
+
+#### Local
 
 The various versions of this application can be run locally on a machine with a compatible version of Python installed
 
@@ -124,7 +126,7 @@ The various versions of this application can be run locally on a machine with a 
    pip install -r requirements.txt
    ```
 
-### Installation - Docker
+#### Docker
 
 The CLI and Web App versions of this application can also be run using Docker containers
 
