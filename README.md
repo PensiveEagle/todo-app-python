@@ -129,12 +129,22 @@ The various versions of this application can be run locally on a machine with a 
 
 ### Installation - Docker
 
-The various versions of this application can also be run using Docker containers
+The CLI and Web App versions of this application can also be run using Docker containers
 
 1. Clone the repo
    ```sh
    git clone https://github.com/PensiveEagle/todo-app-python.git
    ```
+2. Jump into the app directory
+   ```sh
+   cd todo-app-python
+   ```
+3. Build the Docker images
+   ```sh
+   docker build -t todo-cli-version -f cli_version.dockerfile .
+   docker build -t todo-web-version -f web_version.dockerfile .
+   ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -179,11 +189,16 @@ The various versions of this application can also be run using Docker containers
  
 #### CLI Version
 1. Run docker container
-
-#### GUI Version
-
+   ```sh
+   docker run -it --rm --name cli-todo-app todo-cli-version
+   ```
 
 #### Webapp Version
+1. Run docker container
+   ```sh
+   docker run --rm -d --name web-todo-app -p 8080:8080 todo-web-version
+   ```
+2. Visit localhost:8080 in your web browser
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
