@@ -78,7 +78,7 @@ The application comes with the ability to use three user interfaces, a CLI text 
 <img src="docs/assets/gui-screenshot.png" alt="GUI Screenshot" width="100%" height="auto">
 
 #### WebApp Interface
-<img src="docs/assets/cli-screenshot.png" alt="WebApp Interface" width="100%" height="auto">
+<img src="docs/assets/web-screenshot.png" alt="WebApp Interface" width="100%" height="auto">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,6 +87,7 @@ The application comes with the ability to use three user interfaces, a CLI text 
 ### Built With
 
 [![Python][python-shield]][python-url]
+[![Streamlit][streamlit-shield]][streamlit-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -234,3 +235,5 @@ The CLI and Web App versions of this application can also be run using Docker co
 [webapp-screenshot]: docs/assets/webapp-screenshot.png
 [python-shield]: https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white
 [python-url]: https://python.org/
+[streamlit-shield]: https://img.shields.io/badge/streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white
+[streamlit-url]: https://streamlit.io/
