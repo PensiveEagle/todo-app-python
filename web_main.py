@@ -28,3 +28,12 @@ st.text_input( label = "Enter a new task",
               label_visibility = "hidden",
               on_change = add_task,
               key = "new_task" )
+
+'''
+______
+   |  |
+   |__|
+   |  |
+\_/|  |
+
+'''
