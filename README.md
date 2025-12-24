@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/PensiveEagle/" target="_blank">
-    <img src="docs/assets/pensiveeagle-logo.svg" alt="Logo" width="200" height="auto">
+    <img src="https://raw.githubusercontent.com/PensiveEagle/repo-assets/869e68466915785fdc1c44c324f2d84de119e5f1/readme_assets/general_assets/pensiveeagle-logo.svg" alt="Logo" width="200" height="auto">
   </a>
 
 <h3 align="center">Simple To-Do App</h3>
@@ -68,13 +68,13 @@ It is a simple To-Do tracking application that allows a user to add and complete
 The application comes with the ability to use three user interfaces, a CLI text only interface, a GUI interface creating using (insert package here), and a WebApp interface using StreamLit.
 
 #### CLI
-<img src="docs/assets/cli-screenshot.png" alt="CLI Screenshot" width="100%" height="auto">
+<img src="https://github.com/PensiveEagle/repo-assets/blob/main/readme_assets/todo-app-python-assets/cli-screenshot.png?raw=true" alt="CLI Screenshot" width="100%" height="auto">
 
 #### Desktop GUI
-<img src="docs/assets/gui-screenshot.png" alt="GUI Screenshot" width="100%" height="auto">
+<img src="https://github.com/PensiveEagle/repo-assets/blob/main/readme_assets/todo-app-python-assets/gui-screenshot.png?raw=true" alt="GUI Screenshot" width="100%" height="auto">
 
 #### WebApp Interface
-<img src="docs/assets/web-screenshot.png" alt="WebApp Interface" width="100%" height="auto">
+<img src="https://github.com/PensiveEagle/repo-assets/blob/main/readme_assets/todo-app-python-assets/web-screenshot.png?raw=true" alt="WebApp Interface" width="100%" height="auto">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -211,7 +211,7 @@ The CLI and Web App versions of this application can also be run using Docker co
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<div align="center"><img src="docs/assets/makers_mark_circle.svg" width="50"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/PensiveEagle/repo-assets/869e68466915785fdc1c44c324f2d84de119e5f1/readme_assets/general_assets/makers_mark_circle.svg" width="50"></div>
 
 
 
