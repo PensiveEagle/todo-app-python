@@ -64,3 +64,12 @@ while loop:
         break
     
 print( f'\nClosing To Do App!!\n' )
+
+'''
+______
+   |  |
+   |__|
+   |  |
+\_/|  |
+
+'''
