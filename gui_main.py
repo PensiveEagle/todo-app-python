@@ -86,3 +86,12 @@ while True:
     window['clock'].update( value = time.strftime( '%Y-%m-%d -- %H:%M' ) ) #type: ignore
             
 window.close()
+
+'''
+______
+   |  |
+   |__|
+   |  |
+\_/|  |
+
+'''
