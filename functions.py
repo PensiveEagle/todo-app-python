@@ -15,3 +15,12 @@ def write_tasks( tasks: list , filepath: str = FILEPATH ) -> None:
     ''' Writes a list of tasks out to a text file '''
     with open( filepath, 'w' ) as task_file:
         task_file.writelines( tasks )
+
+'''
+______
+   |  |
+   |__|
+   |  |
+\_/|  |
+
+'''
